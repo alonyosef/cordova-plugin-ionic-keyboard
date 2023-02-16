@@ -133,6 +133,20 @@ Keyboard.setResizeMode('body');
 Keyboard.setResizeMode('ionic');
 ```
 
+### Keyboard.setSoftInputMode (for Android only)
+
+> Programmatically set the soft input mode
+
+Call the method with parameter to set the resize mode. 
+
+```js
+// Possible values are:
+Keyboard.setSoftInputMode(0x00); // UNSPECIFIED
+Keyboard.setSoftInputMode(0x10); // ADJUST_RESIZE
+Keyboard.setSoftInputMode(0x20); // ADJUST_PAN
+Keyboard.setSoftInputMode(0x30); // ADJUST_NOTHING
+```
+
 ### Keyboard.setKeyboardStyle (for iOS only)
 
 > Programmatically set the keyboard style

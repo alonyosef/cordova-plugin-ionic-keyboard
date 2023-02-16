@@ -94,6 +94,10 @@ Keyboard.setResizeMode = function (mode) {
     exec(null, null, "CDVIonicKeyboard", "setResizeMode", [mode]);
 }
 
+Keyboard.setSoftInputMode = function (mode) {
+    console.warn("Keyboard.setSoftInputMode() not supported in iOS");
+}
+
 Keyboard.setKeyboardStyle = function(style) {
     exec(null, null, "CDVIonicKeyboard", "keyboardStyle", [style]);
 };

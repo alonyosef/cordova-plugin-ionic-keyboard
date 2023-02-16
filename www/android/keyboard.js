@@ -57,6 +57,10 @@ Keyboard.setResizeMode = function (mode) {
     console.warn("Keyboard.setResizeMode() not supported in Android");
 }
 
+Keyboard.setSoftInputMode = function (mode) {
+    exec(null, null, "CDVIonicKeyboard", "show", [mode]);
+}
+
 Keyboard.setKeyboardStyle = function(style) {
     console.warn("Keyboard.setKeyboardStyle() not supported in Android");
 };

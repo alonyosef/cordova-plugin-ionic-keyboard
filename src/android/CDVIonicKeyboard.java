@@ -35,6 +35,21 @@ public class CDVIonicKeyboard extends CordovaPlugin {
     }
 
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("setSoftInputMode".equals(action)) {
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                    int mode = args.optInt(0, 0);
+                    cordova.getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            cordova.getActivity().getWindow().setSoftInputMode(mode);
+                            callbackContext.success(); // Thread-safe.
+                        }
+                    });
+                }
+            });
+            return true;
+        }
         if ("hide".equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {

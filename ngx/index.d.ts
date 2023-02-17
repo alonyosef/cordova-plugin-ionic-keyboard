@@ -59,6 +59,11 @@ export declare class Keyboard extends IonicNativePlugin {
      */
     setResizeMode(mode: KeyboardResizeMode): void;
     /**
+     * Programatically set the soft input mode
+     * @param mode {number}
+     */
+    setSoftInputMode(mode: number): void;
+    /**
      * Programatically set Keyboard style
      * @param mode {string}
      */

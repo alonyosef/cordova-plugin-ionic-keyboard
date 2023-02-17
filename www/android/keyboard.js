@@ -58,7 +58,7 @@ Keyboard.setResizeMode = function (mode) {
 }
 
 Keyboard.setSoftInputMode = function (mode) {
-    exec(null, null, "CDVIonicKeyboard", "show", [mode]);
+    exec(null, null, "CDVIonicKeyboard", "setSoftInputMode", [mode]);
 }
 
 Keyboard.setKeyboardStyle = function(style) {
